@@ -20,7 +20,7 @@ function App() {
 
   useEffect(() => {
     if (text !== '') {
-      api.get(`/search/movie/`, {
+      api.get('/search/movie', {
       params: {
         query: text,
       }
