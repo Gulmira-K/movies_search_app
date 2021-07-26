@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { BrowserRouter, Switch, Route } from 'react-router-dom'
+import { BrowserRouter, Switch, Route, HashRouter } from 'react-router-dom'
 import { useSelector, useDispatch } from 'react-redux'
 import { setFoundMovies } from './redux/slice'
 import './App.scss'
@@ -36,16 +36,16 @@ function App() {
 
   return (
     <div className="App ">
-      <BrowserRouter basename={process.env.PUBLIC_URL}>
+      <HashRouter basename={process.env.PUBLIC_URL}>
         <Header setText={setText} />
         <Switch>
           <Route exact path={'/'} component={Home} />
-          <Route exact path={'/search'}>
+          <Route path={'/search'}>
             <FoundMovies  movies={foundMovies} />
           </Route>
-          <Route  exact path={'/details'} component={MovieData} />
+          <Route  path={'/details'} component={MovieData} />
         </Switch>
-      </BrowserRouter>
+      </HashRouter>
     </div>
   );
 }
