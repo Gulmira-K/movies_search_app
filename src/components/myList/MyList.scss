@@ -1,0 +1,57 @@
+@import '../colors.scss';
+
+.myListModal {
+  position: fixed;
+  width: 100vw;
+  height: 100%;
+  right: 0;
+  top: 10vh;
+  z-index: 100;
+  background-color: rgba(255, 255, 255, 0.3);
+
+  ul {
+    background-color: $dark;
+    opacity: 1;
+    width: 380px;
+    height: 520px;
+    margin: 2vh auto;
+    border-radius: 4px;
+    padding: 2vh 2vw;
+    overflow-y: scroll;
+
+    li {
+      list-style-type: none;
+      background-color: transparent;
+      color: $lighter;
+      padding: 2vh 0;
+
+      &:first-of-type {
+        padding: 0 0 4vh 0;
+      }
+
+      span {
+        background-color: transparent;
+      }
+
+      .close {
+        background-color: transparent;
+        float: right;
+        cursor: pointer;
+        font-size: 22px;
+      }
+
+      .trash {
+        float: right;
+        color: $bright;
+        background-color: transparent;
+        cursor: pointer;
+      }
+
+      .emptyList {
+        width: 100%;
+        text-align: center;
+        background-color: transparent;
+      }
+    }
+  }
+}

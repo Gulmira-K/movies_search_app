@@ -1,0 +1,113 @@
+@import '../colors.scss';
+
+.movieData {
+  position: absolute;
+  top: 10vh;
+  left: 0;
+  min-height: 90vh;
+  width: 100%;
+  background-color: $solid;
+  padding: 3vh 3vw;
+  color: $lighter;
+  overflow-y: auto;
+  z-index: 10;
+
+  i {
+    font-size: clamp(1.5em, 2.5vw, 1.8em);
+    cursor: pointer;
+
+    &:hover {
+      transform: translateY(-2px);
+      text-shadow: 0 5px 5px $dark;
+    }
+  }
+
+  h1 {
+    color: $bright;
+    font-size: clamp(1.3em, 2.5vw, 2.8em);
+    margin: 1vh 0 2vh 3vw;
+  }
+
+  h3 {
+    font-size: clamp(1em, 2.5vw, 1.4em);
+    margin: 2vh 0 0 3vw;
+  }
+
+  p {
+    font-size: clamp(0.8em, 2.5vw, 1.2em);
+    margin: 1vh 0 2vh 3vw;
+    width: 70%;
+    height: 100%;
+  }
+
+  img {
+    float: right;
+    width: 25%;
+    margin-right: 3vw;
+  }
+
+  .myList {
+    background-color: transparent;
+    padding: 0.5% 1%;
+    margin: 0 0 2vh 3vw;
+    font-size: clamp(0.8em, 2.5vw, 1em);
+    color: $lighter;
+    border-radius: 4px;
+    background-color: transparent;
+    border: 2px solid $lighter;
+    outline: none;
+    cursor: pointer;
+    width: 100px;
+
+    &:hover {
+      color: $dark;
+      background-color: $lighter;
+    }
+  }
+
+  .added {
+    color: $dark;
+    background-color: $lighter;
+    cursor: text;
+    width: 120px;
+  }
+
+  .genreList {
+    display: flex;
+    flex-direction: row;
+    margin: 0 0 2vh 3vw;
+  }
+
+  .genre {
+    list-style-type: none;
+    margin-right: 2vw;
+    font-size: clamp(0.7em, 2.5vw, 1.1em);
+    text-decoration: underline;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .movieData {
+    display: flex;
+    flex-direction: column;
+
+    img {
+      margin-left: 3vw;
+    }
+
+    p {
+      width: 90%;
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .movieData {
+    img {
+      width: 40%;
+    }
+    p {
+      font: 50px;
+    }
+  }
+}

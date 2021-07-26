@@ -1,0 +1,99 @@
+@import '../colors.scss';
+
+.header-container {
+  height: 10vh;
+  width: 100%;
+  background-color: $dark;
+  position: sticky;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  display: grid;
+  grid-template-columns: 13% 70% 13%;
+  grid-gap: 2%;
+  align-items: center;
+
+  a {
+    text-decoration: none;
+  }
+
+  .logo {
+    color: $lighter;
+    background-color: $dark;
+    font-size: clamp(1em, 2vw, 2em);
+    height: 4vh;
+    padding-left: 2vw;
+
+    span {
+      background-color: transparent;
+      margin-left: 2px;
+      font-size: clamp(1.1em, 2vw, 2em);
+    }
+  }
+
+  .fa-film {
+    color: $lighter;
+    background-color: $dark;
+  }
+
+  .input-container {
+    background-color: transparent;
+    align-items: flex-end;
+    position: relative;
+
+    .input {
+      font-size: clamp(0.8em, 2.5vw, 1em);
+      color: $lighter;
+      border-radius: 20px;
+      background-color: transparent;
+      border: 2px solid $lighter;
+      outline: none;
+      padding: 3vh 1vw;
+      height: 4vh;
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .input:focus {
+      background-color: darken($lighter, 65%);
+    }
+    .search-icon {
+      color: $lighter;
+      background-color: transparent;
+      position: absolute;
+      right: 1vw;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+
+  .myList {
+    background-color: transparent;
+    padding: 1vh 0;
+    font-size: clamp(0.8em, 2.5vw, 1em);
+    color: $lighter;
+    border-radius: 20px;
+    background-color: transparent;
+    border: 2px solid $lighter;
+    outline: none;
+    cursor: pointer;
+    height: 6.5vh;
+    width: 90px;
+
+    &:hover {
+      color: $dark;
+      background-color: $lighter;
+    }
+  }
+}
+
+@media only screen and (max-width: 760px) {
+  .header-container {
+    grid-template-columns: 0 60% 40%;
+  }
+  .logo {
+    display: none;
+  }
+}

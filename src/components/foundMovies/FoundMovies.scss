@@ -1,0 +1,41 @@
+@import '../colors.scss';
+
+$width: 180px;
+$height: 250px;
+$border-radius: 4px;
+
+.moviesList {
+  padding: 5vh 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 1%;
+
+  .foundMovie {
+    height: $height;
+    width: $width;
+    left: 50%;
+    transform: translateX(-50%);
+    position: relative;
+
+    img,
+    .imgSubstitution {
+      height: $height;
+      width: $width;
+      border-radius: $border-radius;
+      cursor: pointer;
+    }
+
+    .imgSubstitution {
+      background-color: $bright;
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      h3 {
+        margin: 20% 5%;
+        color: $lighter;
+        background-color: transparent;
+      }
+    }
+  }
+}

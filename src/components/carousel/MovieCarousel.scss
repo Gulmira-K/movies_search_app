@@ -1,0 +1,72 @@
+@import '../colors.scss';
+
+.container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+
+  .movieWrapper {
+    width: 200px;
+    height: 270px;
+    border-radius: 10px;
+    transition: all 0.3s linear;
+    cursor: pointer;
+
+    &:hover {
+      transform: translateY(-3px);
+
+      h5,
+      span {
+        display: block;
+        z-index: 1;
+      }
+      img {
+        filter: brightness(10%);
+      }
+    }
+  }
+
+  img {
+    width: 200px;
+    height: 265px;
+    align-self: center;
+    border-radius: 10px;
+    margin: 2%;
+  }
+
+  h5,
+  span {
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: none;
+    font-weight: bold;
+    font-size: 1.3em;
+  }
+
+  h5 {
+    top: 8vh;
+    width: 155px;
+    color: $lighter;
+    background-color: transparent;
+  }
+  
+  span {
+    bottom: 4vh;
+    color: $bright;
+    background-color: transparent;
+  }
+
+  i {
+    color: orange;
+    padding-right: 3px;
+  }
+
+  .fas,
+  .fa-star {
+    background-color: transparent;
+  }
+}
