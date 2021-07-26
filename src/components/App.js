@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { BrowserRouter, Switch, Route, HashRouter } from 'react-router-dom'
+import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import { useSelector, useDispatch } from 'react-redux'
 import { setFoundMovies } from './redux/slice'
 import './App.scss'
@@ -36,7 +36,7 @@ function App() {
 
   return (
     <div className="App ">
-      <HashRouter basename={process.env.PUBLIC_URL}>
+      <BrowserRouter basename={process.env.PUBLIC_URL}>
         <Header setText={setText} />
         <Switch>
           <Route exact path={'/'} component={Home} />
@@ -45,7 +45,7 @@ function App() {
           </Route>
           <Route  path={'/details'} component={MovieData} />
         </Switch>
-      </HashRouter>
+      </BrowserRouter>
     </div>
   );
 }
