@@ -36,10 +36,10 @@ function App() {
 
   return (
     <div className="App ">
-      <BrowserRouter>
+      <BrowserRouter basename={process.env.PUBLIC_URL}>
         <Header setText={setText} />
         <Switch>
-          <Route exact path={process.env.PUBLIC_URL + '/'} component={Home} />
+          <Route exact path={'/'} component={Home} />
           <Route exact path={'/search'}>
             <FoundMovies  movies={foundMovies} />
           </Route>

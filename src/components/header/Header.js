@@ -16,7 +16,7 @@ const Header = ({ setText }) => {
   return (
     <React.Fragment>
       <div className='header-container'>
-        <Link to={process.env.PUBLIC_URL + '/'} onClick={() => inputValue.current.value = ''}>
+        <Link to={'/'} onClick={() => inputValue.current.value = ''}>
           <div className='logo'>
             <i className="fas fa-film"></i>
             <span>MOVIES</span>
